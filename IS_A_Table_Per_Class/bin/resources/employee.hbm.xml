@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="beans.Employee" table="Employee" schema="niit">   
+       <id name="id"/>
+       <discriminator column="etype"></discriminator>
+       <property name="name"></property>
+       <property name="email"></property>
+       <property name="salary"></property>
+       
+     <subclass name="beans.Software_Employee" discriminator-value="se">
+     	<property name="tool"></property>    
+     </subclass>
+     
+     <subclass name="beans.Hardware_Employee" discriminator-value="he">
+     	<property name="working_hours" column="WH"></property>    
+     </subclass>
+     
+     <subclass name="beans.Admin" discriminator-value="admin">
+     	<property name="branchName" column="BName"></property>    
+     </subclass>
+  </class>  
+            
+ </hibernate-mapping>  
