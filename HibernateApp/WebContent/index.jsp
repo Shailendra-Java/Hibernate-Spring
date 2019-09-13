@@ -46,10 +46,13 @@
 				</tr>
 				<tr>
 					<td><input type="Submit" value="SAVE"></td>
-					<td><a href="connect"> View All Students</a></td>
+					<td><input type="reset"></td>
 				</tr>
 			</table>
 		</form>
 	</center>
+	<h2>Fetch Students</h2>
+	<a href="connect"> View All Students</a>
+	<a href="fetch">Fetch Students by Country</a>
 </body>
 </html>
